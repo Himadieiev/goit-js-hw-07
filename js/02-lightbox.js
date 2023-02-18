@@ -17,16 +17,5 @@ function createGallery (galleryItems){
 
 gallery.insertAdjacentHTML("afterbegin", listOfImages);
 
-function onGalleryClick(event) {
-  event.preventDefault();
-
-  if (event.target.nodeName !== "IMG" ) {
-    return;
-  }
-
-  const lightbox = new SimpleLightbox(".gallery a",
-    { captions: true, captionsData: "alt", captionDelay: 250, });
-
-}
-
-gallery.addEventListener('click', onGalleryClick);
+const lightbox = new SimpleLightbox(".gallery a",
+{ captions: true, captionsData: "alt", captionDelay: 250, });
